@@ -33,14 +33,26 @@ function render(variables = {}) {
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
-          <h2>Web Developer</h2>
-          <h3>Miami, USA</h3>
+          <h1>${variables.name == null ? "Name" : variables.name} ${
+    variables.lastName == null ? "Lastname" : variables.lastname
+  }</h1>
+          <h2>${variables.role == null ? "Role" : variables.role}</h2>
+          <h3>${variables.city == null ? "City" : variables.city} ${
+    variables.country == null ? "Country" : variables.country
+  }</h3>
           <ul class="position-right">
-            <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/school/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/${
+              variables.twitter == null ? "Twitter" : variables.twitter
+            }"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://github.com/${
+              variables.github == null ? "github" : variables.github
+            }"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/${
+              variables.linkedin == null ? "linkedin" : variables.linkedin
+            }"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/${
+              variables.instagram == null ? "instagram" : variables.instagram
+            }"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
@@ -54,9 +66,11 @@ window.onload = function() {
     // if includeCover is true the algorithm should show the cover image
     includeCover: true,
     // this is the image's url that will be used as a background for the profile cover
-    background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da",
+    background:
+      "https://scontent.fccp4-1.fna.fbcdn.net/v/t39.30808-6/346305816_644313957515074_3832255550199159931_n.jpg?stp=dst-jpg_p526x296&_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEGtr0M3Ee3HTr6KuOVyTtQI22D0fOhkTwjbYPR86GRPM5dGX63KeP4juQajQtgH_v8pq44_Tygdb3vrYEJqY_2&_nc_ohc=2slU7f0DCIUAX_-_VXH&_nc_ht=scontent.fccp4-1.fna&oh=00_AfBgQ9eGqTTcpuvcoxVsE_U9C4_14OffG60l5Xj-_bdu5g&oe=65638294",
     // this is the url for the profile avatar
-    avatarURL: "https://randomuser.me/api/portraits/women/42.jpg",
+    avatarURL:
+      "https://scontent.fccp4-1.fna.fbcdn.net/v/t39.30808-6/392946491_6701654049956063_9204560858615509947_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeECRnucj2siFg0idaPgBkHXr-PZmDMkJmKv49mYMyQmYo_IriXlrAGv-6FqcSXNy91HfPybwFPsjpId1xbiV4vS&_nc_ohc=-rVkTVmGF-4AX_E39Cr&_nc_ht=scontent.fccp4-1.fna&oh=00_AfBSGiaGfPNlsaVsFFtL0HAJohPUGgan0dm0nQ5bAZQNcg&oe=656385A4",
     // social media bar position (left or right)
     socialMediaPosition: "position-left",
     // social media usernames
