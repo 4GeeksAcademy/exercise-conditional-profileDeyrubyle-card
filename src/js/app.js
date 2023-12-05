@@ -34,7 +34,7 @@ function render(variables = {}) {
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
           <h1>${variables.name == null ? "Name" : variables.name} ${
-    variables.lastName == null ? "Lastname" : variables.lastname
+    variables.lastName == null ? "Lastname" : variables.lastName
   }</h1>
           <h2>${variables.role == null ? "Role" : variables.role}</h2>
           <h3>${variables.city == null ? "City" : variables.city} ${
@@ -67,10 +67,10 @@ window.onload = function() {
     includeCover: true,
     // this is the image's url that will be used as a background for the profile cover
     background:
-      "https://scontent.fccp4-1.fna.fbcdn.net/v/t39.30808-6/346305816_644313957515074_3832255550199159931_n.jpg?stp=dst-jpg_p526x296&_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEGtr0M3Ee3HTr6KuOVyTtQI22D0fOhkTwjbYPR86GRPM5dGX63KeP4juQajQtgH_v8pq44_Tygdb3vrYEJqY_2&_nc_ohc=2slU7f0DCIUAX_-_VXH&_nc_ht=scontent.fccp4-1.fna&oh=00_AfBgQ9eGqTTcpuvcoxVsE_U9C4_14OffG60l5Xj-_bdu5g&oe=65638294",
+      "https://img.freepik.com/vector-gratis/fondo-ensueno-estetico-vector-cielo-nublado-purpura-diseno-brillo_53876-156334.jpg",
     // this is the url for the profile avatar
     avatarURL:
-      "https://scontent.fccp4-1.fna.fbcdn.net/v/t39.30808-6/392946491_6701654049956063_9204560858615509947_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeECRnucj2siFg0idaPgBkHXr-PZmDMkJmKv49mYMyQmYo_IriXlrAGv-6FqcSXNy91HfPybwFPsjpId1xbiV4vS&_nc_ohc=-rVkTVmGF-4AX_E39Cr&_nc_ht=scontent.fccp4-1.fna&oh=00_AfBSGiaGfPNlsaVsFFtL0HAJohPUGgan0dm0nQ5bAZQNcg&oe=656385A4",
+      "https://media.vogue.mx/photos/5eb401ff1b6433d045148293/2:3/w_2560%2Cc_limit/la-cantante-adele-adkins.jpg",
     // social media bar position (left or right)
     socialMediaPosition: "position-left",
     // social media usernames
